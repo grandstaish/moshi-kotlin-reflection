@@ -1,5 +1,5 @@
 # moshi-kotlin-reflection
-This repository shows that moshi does not work with Kotlin + ProGuard
+This repository shows that Moshi does not work with Kotlin + ProGuard
 
 **Steps to reproduce**:<br />
 1. Build using `./gradlew clean installDebug` to ensure ProGuard is actually run
