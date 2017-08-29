@@ -9,8 +9,11 @@
 # debugging stack traces.
 -keepattributes SourceFile,LineNumberTable
 
-# Must keep all model fields
--keepclassmembers class nz.bradcampbell.kotlinfun.Point { <fields>; }
+# Must keep all model fields and constructors
+-keepclassmembers class nz.bradcampbell.kotlinfun.Point {
+  <init>(...);
+  <fields>;
+}
 
 # Moshi
 -dontwarn okio.**
