@@ -20,7 +20,5 @@
 -dontwarn javax.annotation.Nullable
 -dontwarn javax.annotation.ParametersAreNonnullByDefault
 -keep @com.squareup.moshi.JsonQualifier interface *
-
--dontwarn kotlin.reflect.jvm.internal.**
+-dontwarn org.jetbrains.annotations.**
 -keep class kotlin.Metadata { *; }
-
