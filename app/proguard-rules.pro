@@ -9,20 +9,18 @@
 # debugging stack traces.
 -keepattributes SourceFile,LineNumberTable
 
-# Must keep all model fields
--keepclassmembers class nz.bradcampbell.kotlinfun.Point { <fields>; }
+# Must keep all model fields and constructors
+-keepclassmembers class nz.bradcampbell.kotlinfun.Point {
+  <init>(...);
+  <fields>;
+}
 
 # Moshi
 -dontwarn okio.**
 -dontwarn javax.annotation.Nullable
 -dontwarn javax.annotation.ParametersAreNonnullByDefault
--keepclasseswithmembers class * {
-    @com.squareup.moshi.* <methods>;
-}
 -keep @com.squareup.moshi.JsonQualifier interface *
--keepclassmembers class kotlin.Metadata {
-    public <methods>;
-}
 
 -dontwarn kotlin.reflect.jvm.internal.**
-#-keep class kotlin.** { *; }
+-keep class kotlin.Metadata { *; }
+
